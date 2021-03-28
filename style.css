@@ -4,21 +4,23 @@
 
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
-  padding: 100px 0;
+  padding: 0;
   margin: 0;
 }
 
-.pole-hry {
+.pole-hry,
+.pravidla-blok {
   background-color: #283e50;
-  width: 640px;
+  border-radius: 10px 10px 0 0;
+  max-width: 640px;
   height: auto;
-  margin: auto;
+  margin: 2rem auto;
   display: flex;
+  flex-direction: column;
 }
 
-img {
-  overflow: auto;
-  width: 640px;
+.uvodni {
+  border-radius: 10px 10px 0 0;
 }
 
 h1 {
@@ -27,46 +29,114 @@ h1 {
   font-weight: 300;
   color: white;
   text-align: center;
-  flex-grow: 1;
+  margin-bottom: 2rem;
 }
 
 p {
   font-size: 20px;
+  font-family: sans-serif;
   color: white;
   text-align: center;
-  margin: 10px;
-  padding-bottom: 50px;
+  margin: 2rem;
+  padding-bottom: 1rem;
 }
 
 footer {
-  font-size: 20px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
   color: white;
   text-align: center;
   text-decoration: none;
+  padding: 1rem;
+  width: 100%;
 }
 
 .pravidla {
-  display: block;
   background-color: #1fcca4;
   border-bottom: 1px solid #283e50;
-  padding: 15px;
 }
 
 a.pravidla:hover {
   background-color: #1cbb96;
 }
 
+.uvodni-stranka {
+  background-color: #1fcca4;
+  border-bottom: 1px solid #283e50;
+}
+
+a.uvodni-stranka:hover {
+  background-color: #1cbb96;
+}
+
 .zacit-hrat {
   background-color: #0197f6;
-  display: block;
-  padding: 15px;
-  margin-bottom: 0;
 }
 
 a.zacit-hrat:hover {
   background-color: #0090e9;
+}
+
+.obrazky-polozka {
+  font-size: 20px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 40%;
+}
+
+li {
+  color: white;
+  font-family: sans-serif;
+}
+
+.obrazek-obrazek {
+  max-width: 100%;
+}
+
+figcaption {
+  color: white;
+  font-family: sans-serif;
+}
+
+@media (min-width: 450px) {
+  .uvodni-stranka {
+    width: 100%;
+  }
+
+  .obrazky {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .obrazky-polozka {
+    max-width: 30%;
+  }
+
+  .obrazek-obrazek {
+    height: fit-content;
+  }
+}
+
+@media (min-width: 960px) {
+  .obrazky {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .obrazky-polozka {
+    max-width: 30%;
+  }
+
+  .obrazek-obrazek {
+    height: fit-content;
+  }
+
+  .pravidla-blok {
+    max-width: 60%;
+  }
 }
