@@ -46,6 +46,11 @@ footer {
   flex-direction: column;
 }
 
+.kolecko,
+.krizek {
+  filter: invert(100%);
+}
+
 a {
   color: white;
   text-align: center;
@@ -59,7 +64,22 @@ a {
   border-bottom: 1px solid #283e50;
 }
 
-a.pravidla:hover {
+.tlacitkoDomu {
+  background-color: #1fcca4;
+  border-radius: 5%;
+}
+
+.tlacitkoReset {
+  border-radius: 5%;
+}
+
+a.pravidla,
+.tlacitkoDomu:hover,
+:focus {
+  background-color: #1cbb96;
+}
+
+.tlacitkoDomu:focus {
   background-color: #1cbb96;
 }
 
@@ -72,11 +92,17 @@ a.uvodni-stranka:hover {
   background-color: #1cbb96;
 }
 
-.zacit-hrat {
+.zacit-hrat,
+.tlacitkoReset {
   background-color: #0197f6;
 }
 
-a.zacit-hrat:hover {
+a.zacit-hrat,
+.tlacitkoReset:hover {
+  background-color: #0090e9;
+}
+
+.tlacitkoReset:focus {
   background-color: #0090e9;
 }
 
@@ -100,6 +126,48 @@ li {
 figcaption {
   color: white;
   font-family: sans-serif;
+}
+
+.plochaHry {
+  max-width: 80vmin;
+  margin: 2rem auto 1rem auto;
+}
+
+.horniCast {
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.hraje {
+  margin: auto 0 auto 0;
+}
+
+.tlacitka {
+  padding-top: 1rem;
+  margin: auto 0 2rem 0;
+}
+
+.policka {
+  display: flex;
+  flex-wrap: wrap;
+  border: #283e50 solid 1px;
+  max-width: 80vmin;
+  height: 80vmin;
+  padding: 0;
+  flex-grow: 1;
+}
+
+button {
+  background-color: #ffc8da;
+  border: #283e50 solid 1px;
+  width: 10%;
+}
+
+button:hover,
+:focus {
+  background-color: white;
 }
 
 @media (min-width: 450px) {
